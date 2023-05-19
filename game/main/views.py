@@ -9,7 +9,6 @@ from django.http import HttpRequest
 def base(request: HttpRequest):
     daylies = Daylies.objects.all()
     if request.method == 'POST':
-        print(request.POST.dict())
         new = Daylies(text=request.POST.dict()['new'], Player=Player.objects.get(user=request.user))
         new.save()
         return redirect('/')

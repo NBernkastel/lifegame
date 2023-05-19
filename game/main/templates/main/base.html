@@ -44,7 +44,7 @@
             <form method="post" id="dayform">
                 {% csrf_token %}
                 <div class=adddaylies>
-                    <input type="text" id = "dayinput" name = 'new'>
+                    <input type="text" id="dayinput" name='new'>
                 </div>
                 <button type="submit" style="position: absolute; visibility: hidden;"></button>
             </form>
@@ -57,7 +57,20 @@
             {% endfor %}
         </div>
         <div class=quests>
-
+            <form method="post" id="questsform">
+                {% csrf_token %}
+                <div class=addquests>
+                    <input type="text" id="questsinput" name='new'>
+                </div>
+                <button type="submit" style="position: absolute; visibility: hidden;"></button>
+            </form>
+            {% for item in daylies %}
+            <div class=item>
+                <span> {{item.text}} </span>
+                <label for="terms"></label>
+                <input type="checkbox" id="terms" name="terms">
+            </div>
+            {% endfor %}
         </div>
     </div>
 </body>
