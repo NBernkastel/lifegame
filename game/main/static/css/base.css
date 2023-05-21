@@ -1,3 +1,9 @@
+@import 'quests.css';
+@import 'bars.css';
+@import 'menu.css';
+@import 'daylies.css';
+@import 'habits.css';
+
 html {
   background-color: rgba(227, 227, 227, 1);
 }
@@ -6,89 +12,6 @@ html {
   position: relative;
   margin-left: 45%;
   margin-top: 2%;
-}
-
-.hp-bar {
-  position: absolute;
-  margin-left: 52%;
-  margin-top: -5%;
-  width: 10%;
-  height: 10px;
-  background-color: #f19090;
-  border: none;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.hp {
-  height: 100%;
-  width: 45%;
-  background-color: #fa2e2e;
-  /* Цвет прогресс-бара */
-  transition: width 0.3s ease;
-}
-
-.lvl-bar {
-  position: absolute;
-  margin-left: 52%;
-  margin-top: -3%;
-  width: 10%;
-  height: 10px;
-  background-color: #8cee83;
-  border: none;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.lvl {
-  height: 100%;
-  width: 70%;
-  background-color: #4CAF50;
-  /* Цвет прогресс-бара */
-  transition: width 0.3s ease;
-}
-
-.mana-bar {
-  position: absolute;
-  margin-left: 52%;
-  margin-top: -1%;
-  width: 10%;
-  height: 10px;
-  background-color: #6fc6f8;
-  border: none;
-  border-radius: 5px;
-  overflow: hidden;
-}
-
-.mana {
-  height: 100%;
-  width: 70%;
-  background-color: #0095f8;
-  /* Цвет прогресс-бара */
-  transition: width 0.3s ease;
-}
-
-.hp-text {
-  position: absolute;
-  color: #000;
-  margin-left: 56%;
-  margin-top: -7%;
-}
-
-.mana-text {
-  position: absolute;
-  color: #000;
-  margin-left: 56%;
-  margin-top: -2.5%;
-}
-
-
-
-.lvl-text {
-  position: absolute;
-  color: #000;
-  margin-left: 56%;
-  margin-top: -4.5%;
 }
 
 header {
@@ -101,62 +24,6 @@ header {
   width: 100%;
 }
 
-.menu {
-  position: relative;
-  left: 97%;
-  width: 30px;
-  height: 20px;
-  cursor: pointer;
-}
-
-.menu span {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background-color: #000;
-  border-radius: 2px;
-  transition: transform 0.3s ease;
-}
-
-.menu span::before,
-.menu span::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 4px;
-  background-color: #000;
-  border-radius: 2px;
-  transition: transform 0.3s ease;
-}
-
-.menu span::before {
-  top: -6px;
-  transition-delay: 0.1s;
-}
-
-.menu span::after {
-  bottom: -6px;
-  transition-delay: 0.1s;
-}
-
-.menu.active span {
-  transform: rotate(45deg);
-}
-
-.menu.active span::before {
-  transform: rotate(90deg);
-  top: 0;
-  transition-delay: 0s;
-}
-
-.menu.active span::after {
-  transform: rotate(90deg);
-  bottom: 0;
-  transition-delay: 0s;
-}
-
 .tasks {
   position: absolute;
   margin-top: 2%;
@@ -166,89 +33,16 @@ header {
   background-color: #dddddd;
 }
 
-.habits{
+.tasks form{
+  position: relative;
+  height: 100%;
+}
+
+.habits {
   position: relative;
   top: 3%;
   left: 3%;
   width: 30%;
   height: 95%;
   background-color: #f1f1f1;
-}
-
-.daylys{
-  position: relative;
-  width: 30%;
-  height: 95%;
-  left: 36%;
-  top: -92%;
-  background-color: #f1f1f1;
-}
-
-.quests{
-  position: relative;
-  width: 30%;
-  height: 95%;
-  left: 68%;
-  top: -187%;
-  background-color: #f1f1f1;
-}
-.daylys .item{
-  position: relative;
-  top: -5%;
-  left: 2%;
-  margin-bottom: 3%;
-  height: 10%;
-  width: 95%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  background-color: rgb(255, 255, 255);
-}
-.daylys span{
-  position: relative;
-  max-width: 90%;
-  top: 25%;
-  margin-bottom: 5%;
-  color:#000;
-}
-
-.item:hover{
-  position: relative;
-  top: -5.8%;
-  left: 1.8%; 
-}
-
-.adddaylies{
-  position: relative;
-  left: 2%;
-  width: 95%;
-  height: 12%;
-}
-
-.adddaylies input{
-  background-color: #ffffff;
-  position: relative;
-  top: 20%;
-  height: 70% !important;
-}
-.adddaylies input:focus{
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.00);
-  color: #000;
-}
-
-.daylys .item input {
-  position: absolute;
-  left: 93%;
-  top: 35%;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
-}
-
-.daylys .item input:checked{
-  background-color: #00f735;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
-}
-
-.daylys .item input:focus{
-  border-color: #303030;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

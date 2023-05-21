@@ -6,7 +6,6 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link href="{% static 'css/base.css' %}" rel="stylesheet">
-    <script src="{% static 'js/base.js' %}"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
 </head>
 
@@ -37,42 +36,59 @@
         </div>
     </div>
     <div class=tasks>
-        <div class=habits>
-
-        </div>
-        <div class=daylys>
-            <form method="post" id="dayform">
-                {% csrf_token %}
+        <form method="post" id="taskform">
+            {% csrf_token %}
+            <div class=habits>
+                <div class=addhabits>
+                    <input type="text" id="habitsinput" name='habits'>
+                </div>
+                <button type="submit" style="position: absolute; visibility: hidden;"></button>
+                {% for item in habits %}
+                <div class=item>
+                    <span> {{item.text}} </span>
+                    <label for="terms"></label>
+                    <input type="button" name = habitsItem[] value="+">
+                </div>
+                {% endfor %}
+            </div>
+            <div class=daylys>
                 <div class=adddaylies>
-                    <input type="text" id="dayinput" name='new'>
+                    <input type="text" id="dayinput" name='daylies'>
                 </div>
                 <button type="submit" style="position: absolute; visibility: hidden;"></button>
-            </form>
-            {% for item in daylies %}
-            <div class=item>
-                <span> {{item.text}} </span>
-                <label for="terms"></label>
-                <input type="checkbox" id="terms" name="terms">
-            </div>
-            {% endfor %}
-        </div>
-        <div class=quests>
-            <form method="post" id="questsform">
-                {% csrf_token %}
-                <div class=addquests>
-                    <input type="text" id="questsinput" name='new'>
+                {% for item in daylies %}
+                <div class=item>
+                    <span> {{item.text}} </span>
+                    <label for="terms"></label>
+                    {% if item.is_ready == True %}
+                    <input type="checkbox" id="terms" name="dayItem[]" checked="True" value={{item.id}}>
+                    {% else %}
+                    <input type="checkbox" id="terms" name="dayItem[]" value={{item.id}}>
+                    {% endif%}
                 </div>
-                <button type="submit" style="position: absolute; visibility: hidden;"></button>
-            </form>
-            {% for item in daylies %}
-            <div class=item>
-                <span> {{item.text}} </span>
-                <label for="terms"></label>
-                <input type="checkbox" id="terms" name="terms">
+                {% endfor %}
             </div>
-            {% endfor %}
-        </div>
+            <div class=quests>
+                <form method="post" id="questsform">
+                    <div class=addquests>
+                        <input type="text" id="questsinput" name='quests'>
+                    </div>
+                    <button type="submit" style="position: absolute; visibility: hidden;"></button>
+                    {% for item in quests %}
+                    <div class=item>
+                        <span> {{item.text}} </span>
+                        <label for="terms"></label>
+                        {% if item.is_ready == True %}
+                        <input type="checkbox" id="terms" name="questsItem[]" checked="True" value={{item.id}}>
+                        {% else %}
+                        <input type="checkbox" id="terms" name="questsItem[]" value={{item.id}}>
+                        {% endif%}
+                    </div>
+                    {% endfor %}
+            </div>
+        </form>
     </div>
+    <script src="{% static 'js/base.js' %}"></script>
 </body>
 
 </html>

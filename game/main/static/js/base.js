@@ -3,27 +3,18 @@ function toggleMenu() {
   menu.classList.toggle('active');
 }
 
-var form = document.getElementById("dayform");
-var input = document.getElementById("dayinput");
+var taskform = document.getElementById("taskform");
+var check = document.querySelectorAll("#terms")
 
-// Обрабатываем событие отправки формы
-form.addEventListener("submit", function(event) {
-  event.preventDefault(); // Отменяем стандартное поведение формы
-  submitForm();
-});
-
-// Обрабатываем событие нажатия клавиши в поле ввода
-input.addEventListener("keydown", function(event) {
-  if (event.keyCode === 13) { // Проверяем, является ли нажатая клавиша "Enter"
-    event.preventDefault(); // Отменяем стандартное поведение поля ввода
+check.forEach(function (check) {
+  check.addEventListener("change", function (event) {
     submitForm();
-  }
-});
+  });
+})
 
 // Функция отправки формы
 function submitForm() {
-  // Здесь вы можете выполнить необходимые действия перед отправкой формы, например, валидацию данных
-
-  // Отправка POST-запроса
-  form.submit();
-}
+    // Здесь вы можете выполнить необходимые действия перед отправкой формы, например, валидацию данных
+    // Отправка POST-запроса
+    taskform.submit();
+  }

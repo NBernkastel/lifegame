@@ -12,4 +12,13 @@ class PlayerModel(admin.ModelAdmin):
 
 @admin.register(models.Daylies)
 class DayliesModel(admin.ModelAdmin):
-    list_display = ['Player', 'text', 'count', 'series']
+    list_display = ['Player', 'text', 'count', 'series', 'is_ready']
+
+
+@admin.register(models.Quests)
+class QuestsModel(admin.ModelAdmin):
+    list_display = ['Player', 'text', 'is_ready']
+
+@admin.register(models.Habits)
+class HabitsModel(admin.ModelAdmin):
+    list_display = ['Player', 'text', 'count', 'serial']
