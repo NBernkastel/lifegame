@@ -1,0 +1,70 @@
+.quests {
+    position: relative;
+    width: 30%;
+    height: 95%;
+    left: 68%;
+    top: -187%;
+    background-color: #f1f1f1;
+}
+
+.quests .item {
+    position: relative;
+    top: 2%;
+    left: 2%;
+    margin-bottom: 3%;
+    height: 10%;
+    width: 95%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255);
+}
+
+.quests span {
+    position: relative;
+    max-width: 90%;
+    top: 25%;
+    margin-bottom: 5%;
+    color: #000;
+}
+
+.quests .item:hover {
+    position: relative;
+    top: 1.8%;
+    left: 1.8%;
+}
+.addquests {
+    position: relative;
+    left: 2%;
+    width: 95%;
+    height: 12%;
+}
+
+.addquests input {
+    background-color: #ffffff;
+    position: relative;
+    top: 20%;
+    height: 70% !important;
+}
+
+.addquests input:focus {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.00);
+    color: #000;
+}
+
+.quests .item input {
+    position: absolute;
+    left: 93%;
+    top: 35%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+}
+
+.quests .item input:checked {
+    background-color: #00f735;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+}
+
+.quests .item input:focus {
+    border-color: #303030;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,82 @@
+.hp-bar {
+    position: absolute;
+    margin-left: 52%;
+    margin-top: -5%;
+    width: 10%;
+    height: 10px;
+    background-color: #f19090;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.hp {
+    height: 100%;
+    width: 45%;
+    background-color: #fa2e2e;
+    /* Цвет прогресс-бара */
+    transition: width 0.3s ease;
+}
+
+.lvl-bar {
+    position: absolute;
+    margin-left: 52%;
+    margin-top: -3%;
+    width: 10%;
+    height: 10px;
+    background-color: #8cee83;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.lvl {
+    height: 100%;
+    width: 70%;
+    background-color: #4CAF50;
+    /* Цвет прогресс-бара */
+    transition: width 0.3s ease;
+}
+
+.mana-bar {
+    position: absolute;
+    margin-left: 52%;
+    margin-top: -1%;
+    width: 10%;
+    height: 10px;
+    background-color: #6fc6f8;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.mana {
+    height: 100%;
+    width: 70%;
+    background-color: #0095f8;
+    /* Цвет прогресс-бара */
+    transition: width 0.3s ease;
+}
+
+.hp-text {
+    position: absolute;
+    color: #000;
+    margin-left: 56%;
+    margin-top: -7%;
+}
+
+.mana-text {
+    position: absolute;
+    color: #000;
+    margin-left: 56%;
+    margin-top: -2.5%;
+}
+
+
+
+.lvl-text {
+    position: absolute;
+    color: #000;
+    margin-left: 56%;
+    margin-top: -4.5%;
+}

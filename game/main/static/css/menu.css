@@ -1,0 +1,55 @@
+.menu {
+    position: relative;
+    left: 97%;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.menu span {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+.menu span::before,
+.menu span::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: #000;
+    border-radius: 2px;
+    transition: transform 0.3s ease;
+}
+
+.menu span::before {
+    top: -6px;
+    transition-delay: 0.1s;
+}
+
+.menu span::after {
+    bottom: -6px;
+    transition-delay: 0.1s;
+}
+
+.menu.active span {
+    transform: rotate(45deg);
+}
+
+.menu.active span::before {
+    transform: rotate(90deg);
+    top: 0;
+    transition-delay: 0s;
+}
+
+.menu.active span::after {
+    transform: rotate(90deg);
+    bottom: 0;
+    transition-delay: 0s;
+}
